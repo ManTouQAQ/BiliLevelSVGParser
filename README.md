@@ -7,6 +7,14 @@
 - Python 3
 
 ## **使用方式**
+
+### 直接下载
+如果你不想手动提取请点击 [assets](https://github.com/ManTouQAQ/BiliLevelSVGParser/tree/master/assets) 文件夹
+
+里面有LV0~6包括6级闪电标的SVG图片, 可以直接下载使用 (侵权必删)
+
+### 手动提取
+
 先找到网页B站的这个资源 `https://s1.hdslb.com/bfs/static/laputa-home/client/assets/index.<这里是hash值>.js`
 
 打开网页B站后按 `F12`, 点击 `源代码/来源` 后跟着找到上面连接的文件位置
