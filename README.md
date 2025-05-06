@@ -27,13 +27,11 @@
 ```javascript
 function vm(e, t) {
     return c(),
-        u("svg", Am, fm)
+    u("svg", Am, fm)
 }
-
 var Cm = Q(dm, [["render", vm]]);
-const mm = {}
-<------------------------------------------------这里(1)
-    , gm = {
+const mm = {}  <------------------------------------------------ 这里 (1)
+  , gm = {
     t: "1641783191890",
     class: "icon",
     viewBox: "0 0 1901 1024",
@@ -43,33 +41,22 @@ const mm = {}
     width: "200",
     height: "200"
 }
-    , wm = l("path", {
+  , wm = l("path", {
     d: "M146.285714 169.984h1609.142857v707.364571H146.285714z",
     fill: "#FFFFFF",
     "p-id": "2546"
 }, null, -1)
-    , bm = l("path", {
-    class: "level-bg",
-<---------------------------------------这里是搜索到的位置(2)
-d: "这里太长了 省略了",
-    fill
-:
-"#C0C0C0",
-    "p-id"
-:
-"2547"
-},
-null, -1
-)
-,
-km = [wm, bm];
-
-function ym(e, t) {
-    <------------------------------------------这里(3)
+  , bm = l("path", {
+    class: "level-bg",  <--------------------------------------- 这里是搜索到的位置 (2)
+    d: "这里太长了 省略了",
+    fill: "#C0C0C0",
+    "p-id": "2547"
+}, null, -1)
+  , km = [wm, bm];
+function ym(e, t) {  <------------------------------------------ 这里 (3)
     return c(),
-        u("svg", gm, km)
+    u("svg", gm, km)
 }
-
 var Lm = Q(mm, [["render", ym]]);
 ```
 
@@ -78,31 +65,30 @@ var Lm = Q(mm, [["render", ym]]);
 从 `const` 开始 (包括 const) 一直到下面的 `function` 关键字 (在箭头3) 之前复制下来
 
 复制后的内容类似
-
 ```javascript
 const mm = {}
-    , gm = {
-        t: "1641783191890",
-        class: "icon",
-        viewBox: "0 0 1901 1024",
-        version: "1.1",
-        xmlns: "http://www.w3.org/2000/svg",
-        "p-id": "2545",
-        width: "200",
-        height: "200"
-    }
-    , wm = l("path", {
-        d: "M146.285714 169.984h1609.142857v707.364571H146.285714z",
-        fill: "#FFFFFF",
-        "p-id": "2546"
-    }, null, -1)
-    , bm = l("path", {
-        class: "level-bg",
-        d: "这里太长了 省略了",
-        fill: "#C0C0C0",
-        "p-id": "2547"
-    }, null, -1)
-    , km = [wm, bm];
+  , gm = {
+    t: "1641783191890",
+    class: "icon",
+    viewBox: "0 0 1901 1024",
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    "p-id": "2545",
+    width: "200",
+    height: "200"
+}
+  , wm = l("path", {
+    d: "M146.285714 169.984h1609.142857v707.364571H146.285714z",
+    fill: "#FFFFFF",
+    "p-id": "2546"
+}, null, -1)
+  , bm = l("path", {
+    class: "level-bg",
+    d: "这里太长了 省略了",
+    fill: "#C0C0C0",
+    "p-id": "2547"
+}, null, -1)
+  , km = [wm, bm];
 ```
 
 将他们保存到文件, 这里我保存到了 test.js
@@ -130,7 +116,6 @@ python main.py -i test.js -o test.svg
 然后我就花了2小时写了一个自动解析的小工具 =w=
 
 具体流程:
-
 - 词法分析
 - 语法分析
 - 解析成SVG
